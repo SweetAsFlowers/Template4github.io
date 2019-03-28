@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var loc_url = window.location.href;
-    var perfix = (loc_url.substring(0, 4) == 'http')? 'http://': 'https://';
-    var owner = loc_url.split(perfix)[1].split('.')[0];
+    var prefix = (loc_url.substring(0, 5) == 'https')? 'https://': 'http://';
+    var owner = loc_url.split(prefix)[1].split('.')[0];
     // owner = 'sweetasflowers' // for debug
     var repo = owner+'.github.io';
     var issues_url = 'https://api.github.com/repos/'+owner+'/'+repo+'/issues';
